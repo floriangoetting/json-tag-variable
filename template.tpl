@@ -102,6 +102,22 @@ ___TEMPLATE_PARAMETERS___
         ]
       }
     ]
+  },
+  {
+    "type": "GROUP",
+    "name": "processingSettings",
+    "displayName": "Processing Settings",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "cleanPayloadValues",
+        "checkboxText": "Clean JSON Payload Values",
+        "simpleValueType": true,
+        "defaultValue": true,
+        "help": "If this checkbox is enabled, the event specific and global payload values will be recursively cleaned by removing empty, null and undefined values."
+      }
+    ]
   }
 ]
 
@@ -113,7 +129,8 @@ return {
   endpointHostname: data.endpointHostname,
   endpointPath: data.endpointPath,
   enableGzip: data.enableGzip,
-  globalPayloadData: data.globalPayloadData
+  globalPayloadData: data.globalPayloadData,
+  cleanPayloadValues: data.cleanPayloadValues
 };
 
 
@@ -124,6 +141,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 25.3.2025, 20:16:51
+Created on 3.2.2025, 13:12:02
 
 
