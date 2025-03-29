@@ -24,3 +24,6 @@ When the option "Enable GZIP Compression of JSON Post Body" is checked, the JSON
 
 ### Global Payload Settings
 In the Global Payload Settings it is possible to define key value pairs which are added to the JSON Payload to every JSON Tag event where the variable is selected as "Global Settings Configuration Variable".
+
+### Clean JSON Payload Values
+If this checkbox is enabled, the event specific and global payload values will be recursively cleaned by removing empty, null and undefined values.
