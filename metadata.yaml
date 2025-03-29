@@ -1,7 +1,7 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
-  - sha: xxx
+  - sha: 8f32c504e68b5b22bb08d45445aa7082d6244aa9
     changeNotes: Add Option to enable and disable JSON cleaning
   - sha: bf46de8a3ac5d08c06dcdbdb9bfc2dfb8012eb8e
     changeNotes: Updated metadata.yaml
