@@ -2,7 +2,7 @@
 
 **Custom Variable Template for client-side Google Tag Manager**
 
-The JSON Tag Settings Variable let's you configure Global Settings which apply to all of your JSON Tags.
+The JSON Tag Settings Variable let's you configure Global Settings which are applied to all of your JSON Tags.
 
 With the help of JSON Tag you can send your own JSON Data from your client-side GTM to your server-side GTM Instance and set stable, long-lasting server-set first party cookies to identify visitors and sessions.
 
