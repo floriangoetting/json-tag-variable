@@ -1,15 +1,5 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
-  - sha: 586b01b3196c34499c0a17dc0caaec428f696e0b
+  - sha: xxx
     changeNotes: Initial release.
-  - sha: a74e6cbe6bc6dc5eb7e57a14b18ebd8f4640032b
-    changeNotes: Add Library Settings to specify how the JSON Tag Library should be hosted
-  - sha: 6f0741becc0125d1940e4f9ec48165cd864b19b0
-    changeNotes: Add option to customize the idService Data Layer Push
-  - sha: 8f32c504e68b5b22bb08d45445aa7082d6244aa9
-    changeNotes: Add Option to enable and disable JSON cleaning
-  - sha: bf46de8a3ac5d08c06dcdbdb9bfc2dfb8012eb8e
-    changeNotes: Updated metadata.yaml
-  - sha: e40d5e0b903cbb45b506eba861bc9d610b4cb555
-    changeNotes: Initial Commit

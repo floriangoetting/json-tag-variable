@@ -46,8 +46,8 @@ ___TEMPLATE_PARAMETERS___
             "displayValue": "Self-hosted"
           },
           {
-            "value": "gtm",
-            "displayValue": "GTM"
+            "value": "none",
+            "displayValue": "Do not load library"
           }
         ],
         "simpleValueType": true,
