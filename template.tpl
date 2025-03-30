@@ -27,6 +27,71 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "type": "GROUP",
+    "name": "librarySettings",
+    "displayName": "Library Settings",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "SELECT",
+        "name": "libraryHost",
+        "displayName": "JSON Tag Library Hosting",
+        "macrosInSelect": false,
+        "selectItems": [
+          {
+            "value": "jsDelivr",
+            "displayValue": "jsDelivr"
+          },
+          {
+            "value": "selfHosted",
+            "displayValue": "Self-hosted"
+          },
+          {
+            "value": "gtm",
+            "displayValue": "GTM"
+          }
+        ],
+        "simpleValueType": true,
+        "defaultValue": "jsDelivr",
+        "help": "You have the option here to configure your preferred way to host the JSON Tag Library. The JSON Tag Library is a very lightweight piece of code used to send the data to the Server. You can find more details about the configuration options in the documentation on GitHub: https://github.com/floriangoetting/json-tag"
+      },
+      {
+        "type": "TEXT",
+        "name": "libraryVersion",
+        "displayName": "Library Version",
+        "simpleValueType": true,
+        "enablingConditions": [
+          {
+            "paramName": "libraryHost",
+            "paramValue": "jsDelivr",
+            "type": "EQUALS"
+          }
+        ],
+        "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
+        "defaultValue": "1.0.0"
+      },
+      {
+        "type": "TEXT",
+        "name": "libraryUrl",
+        "displayName": "Library URL",
+        "simpleValueType": true,
+        "help": "If you select the Self-hosted option, you need to specify the URL to the JSON Tag Library here. You can find the different Library Versions in the Release Section of the Github Repository of JSON Tag: https://github.com/floriangoetting/json-tag. Pick your version, search for the dist/jsonTagSendData-min.js file, upload it to your Server and set the url here. You also need to make sure to include your url to the allowed Script Injection Sources in the Permissions tab of the JSON Tag Template to avoid any Prohibited script URL errors.",
+        "enablingConditions": [
+          {
+            "paramName": "libraryHost",
+            "paramValue": "selfHosted",
+            "type": "EQUALS"
+          }
+        ],
+        "valueValidators": [
+          {
+            "type": "NON_EMPTY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "GROUP",
     "name": "dispatchingSettings",
     "displayName": "Dispatching Settings",
     "groupStyle": "ZIPPY_OPEN",
@@ -172,6 +237,9 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 return {
   type: 'jsontag',
+  libraryHost: data.libraryHost,
+  libraryVersion: data.libraryVersion,
+  libraryUrl: data.libraryUrl,
   endpointHostname: data.endpointHostname,
   endpointPath: data.endpointPath,
   enableGzip: data.enableGzip,

@@ -13,6 +13,19 @@ Fill our the fields and save the variable.
 
 Select the variable in each JSON Tag under the "Global Settings" in the field "Global Settings Configuration Variable".
 
+### JSON Tag Library Hosting
+You have the option here to configure your preferred way to host the JSON Tag Library. The JSON Tag Library is a very lightweight piece of code used to send the data to the Server.
+
+The default Option is "jsDelivr" which will request the JSON Tag Library from the Github Repository https://github.com/floriangoetting/json-tag. If this option is selected, the Library Version needs to be specified. You can find more details about this in the next point.
+
+The second Option is "Self-hosted" which let's you specify your own URL to load the JSON Tag Libary from. You can find the different Library Versions in the Release Section of the Github Repository of JSON Tag: https://github.com/floriangoetting/json-tag. Pick your version, search for the dist/jsonTagSendData-min.js file, upload it to your Server and set the url in the field Library URL. You also need to make sure to include your url to the allowed Script Injection Sources in the Permissions tab of the JSON Tag Template to avoid any Prohibited script URL errors.
+
+### Library Version
+If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.
+
+### Library Library URL
+If you select the Self-hosted option, you need to specify the URL to the JSON Tag Library here. See details above under JSON Tag Library Hosting.
+
 ### Endpoint Hostname
 Set the endpoint hostname of your server-side GTM Instance. It needs to be a https Domain as for example "https://www.domain.com".
 
