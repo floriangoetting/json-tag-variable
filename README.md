@@ -25,7 +25,7 @@ The third Option is "Do not load library". If this option is selected, the JSON 
 ### Library Version
 If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.
 
-### Library Library URL
+### Library URL
 If you select the Self-hosted option, you need to specify the URL to the JSON Tag Library here. See details above under JSON Tag Library Hosting.
 
 ### Endpoint Hostname
