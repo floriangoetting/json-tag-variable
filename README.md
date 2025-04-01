@@ -20,12 +20,12 @@ The default Option is "jsDelivr" which will request the JSON Tag Library from th
 
 The second Option is "Self-hosted" which let's you specify your own URL to load the JSON Tag Libary from. You can find the different Library Versions in the Release Section of the Github Repository of JSON Tag: https://github.com/floriangoetting/json-tag. Pick your version, search for the dist/jsonTagSendData-min.js file, upload it to your Server and set the url in the field Library URL. You also need to make sure to include your url to the allowed Script Injection Sources in the Permissions tab of the JSON Tag Template to avoid any Prohibited script URL errors.
 
-The third Option is "Do not load library". If this option is selected, the JSON Tag Template will not inject the JSON Tag Library. This is helpful if you want to include the library directly into the source code of the Website or if you want to load the library within a <script type="text/gtmscript"></script> in the Google Tag Manager. For the Google Tag Manager approach you can pick your version, search for the dist/jsonTagSendData-min.js file in this repository, copy the contents, paste it in a custom HTML Tag wrapped by <script type="text/gtmscript"></script> and add an initialization trigger to load the libary as soon as possible.
+The third Option is "Do not load library". If this option is selected, the JSON Tag Template will not inject the JSON Tag Library. This is helpful if you want to include the library directly into the source code of the Website or if you want to load the library within a <script type="text/gtmscript"></script> tag in the Google Tag Manager. For the Google Tag Manager approach you can pick your version in the release section of the https://github.com/floriangoetting/json-tag respository, search for the dist/jsonTagSendData-min.js file, copy the contents, paste it in a custom HTML Tag wrapped by <script type="text/gtmscript"></script> and add an initialization trigger to load the libary as soon as possible.
 
 ### Library Version
 If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.
 
-### Library Library URL
+### Library URL
 If you select the Self-hosted option, you need to specify the URL to the JSON Tag Library here. See details above under JSON Tag Library Hosting.
 
 ### Endpoint Hostname
@@ -50,4 +50,8 @@ If this checkbox is enabled, the Device ID, Session ID and the configured tag re
 You can specify the name of your Data Layer here in case you are not using the default "dataLayer" as a Data Layer name.
 
 ### Data Layer Event Name
+<<<<<<< HEAD
 You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "jsonclientResponse".
+=======
+You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "idService".
+>>>>>>> 63e45a465500bb032c9f3670c2f261a8747d5386
