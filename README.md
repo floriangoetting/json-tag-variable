@@ -50,8 +50,4 @@ If this checkbox is enabled, the Device ID, Session ID and the configured tag re
 You can specify the name of your Data Layer here in case you are not using the default "dataLayer" as a Data Layer name.
 
 ### Data Layer Event Name
-<<<<<<< HEAD
 You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "jsonclientResponse".
-=======
-You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "idService".
->>>>>>> 63e45a465500bb032c9f3670c2f261a8747d5386
