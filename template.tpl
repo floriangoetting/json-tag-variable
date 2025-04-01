@@ -186,17 +186,17 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "GROUP",
-    "name": "returnSettings",
-    "displayName": "Return Settings",
+    "name": "responseSettings",
+    "displayName": "Response Settings",
     "groupStyle": "ZIPPY_OPEN",
     "subParams": [
       {
         "type": "CHECKBOX",
-        "name": "pushIdsInDataLayer",
-        "checkboxText": "Push IDs in Data Layer",
+        "name": "pushResponseInDataLayer",
+        "checkboxText": "Push Response in Data Layer",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "If this checkbox is enabled, the Device ID and Session ID will be pushed to the data layer to enable an easy access if needed, even if the Device and Session cookies are set with HTTP-Only Cookies."
+        "help": "If this checkbox is enabled, the Device ID, Session ID and the configured tag responses will be pushed to the data layer to enable an easy access if needed, even if the Device and Session cookies are set with HTTP-Only Cookies."
       },
       {
         "type": "TEXT",
@@ -205,7 +205,7 @@ ___TEMPLATE_PARAMETERS___
         "simpleValueType": true,
         "enablingConditions": [
           {
-            "paramName": "pushIdsInDataLayer",
+            "paramName": "pushResponseInDataLayer",
             "paramValue": true,
             "type": "EQUALS"
           }
@@ -218,11 +218,11 @@ ___TEMPLATE_PARAMETERS___
         "name": "dataLayerEventName",
         "displayName": "Data Layer Event Name",
         "simpleValueType": true,
-        "defaultValue": "idService",
-        "help": "You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name \"idService\".",
+        "defaultValue": "jsonclientResponse",
+        "help": "You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name \"jsonclientResponse\".",
         "enablingConditions": [
           {
-            "paramName": "pushIdsInDataLayer",
+            "paramName": "pushResponseInDataLayer",
             "paramValue": true,
             "type": "EQUALS"
           }
@@ -245,7 +245,7 @@ return {
   enableGzip: data.enableGzip,
   globalPayloadData: data.globalPayloadData,
   cleanPayloadValues: data.cleanPayloadValues,
-  pushIdsInDataLayer: data.pushIdsInDataLayer,
+  pushResponseInDataLayer: data.pushResponseInDataLayer,
   dataLayerName: data.dataLayerName,
   dataLayerEventName: data.dataLayerEventName
 };

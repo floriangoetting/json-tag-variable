@@ -43,11 +43,11 @@ In the Global Payload Settings it is possible to define key value pairs which ar
 ### Clean JSON Payload Values
 If this checkbox is enabled, the event specific and global payload values will be recursively cleaned by removing empty, null and undefined values.
 
-### Push IDs in Data Layer
-If this checkbox is enabled, the Device ID and Session ID will be pushed to the data layer to enable an easy access if needed, even if the Device and Session cookies are set with HTTP-Only Cookies.
+### Push Response in Data Layer
+If this checkbox is enabled, the Device ID, Session ID and the configured tag responses will be pushed to the data layer to enable an easy access if needed, even if the Device and Session cookies are set with HTTP-Only Cookies.
 
 ### Data Layer Name
 You can specify the name of your Data Layer here in case you are not using the default "dataLayer" as a Data Layer name.
 
 ### Data Layer Event Name
-You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "idService".
+You can define the name of the Data Layer Event here if you wish to use a different Data Layer Event name than the default name "jsonclientResponse".
