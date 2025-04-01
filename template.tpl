@@ -67,7 +67,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.0.0"
+        "defaultValue": "1.1.0"
       },
       {
         "type": "TEXT",
