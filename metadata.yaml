@@ -1,5 +1,5 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
-  - sha: xxx
+  - sha: ea26e4f2652b11e3f641f43a7b96750bde8959bf
     changeNotes: Initial release.
