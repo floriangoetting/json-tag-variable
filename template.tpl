@@ -67,7 +67,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.1.0"
+        "defaultValue": "1.2.0"
       },
       {
         "type": "TEXT",
@@ -176,11 +176,11 @@ ___TEMPLATE_PARAMETERS___
     "subParams": [
       {
         "type": "CHECKBOX",
-        "name": "cleanPayloadValues",
-        "checkboxText": "Clean JSON Payload Values",
+        "name": "cleanPayload",
+        "checkboxText": "Clean JSON Payload",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "If this checkbox is enabled, the event specific and global payload values will be recursively cleaned by removing empty, null and undefined values."
+        "help": "If this checkbox is enabled, the event specific and global payload will be recursively cleaned by removing empty, null and undefined values. It will also remove the parent objects if they contain only empty or invalid values after the cleaning."
       }
     ]
   },
