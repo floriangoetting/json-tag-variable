@@ -40,8 +40,8 @@ When the option "Enable GZIP Compression of JSON Post Body" is checked, the JSON
 ### Global Payload Settings
 In the Global Payload Settings it is possible to define key value pairs which are added to the JSON Payload to every JSON Tag event where the variable is selected as "Global Settings Configuration Variable".
 
-### Clean JSON Payload Values
-If this checkbox is enabled, the event specific and global payload values will be recursively cleaned by removing empty, null and undefined values.
+### Clean JSON Payload
+If this checkbox is enabled, the event specific and global payload will be recursively cleaned by removing empty, null and undefined values. It will also remove the parent objects if they contain only empty or invalid values after the cleaning.
 
 ### Push Response in Data Layer
 If this checkbox is enabled, the Device ID, Session ID and the configured tag responses will be pushed to the data layer to enable an easy access if needed, even if the Device and Session cookies are set with HTTP-Only Cookies.
