@@ -244,7 +244,7 @@ return {
   endpointPath: data.endpointPath,
   enableGzip: data.enableGzip,
   globalPayloadData: data.globalPayloadData,
-  cleanPayloadValues: data.cleanPayloadValues,
+  cleanPayload: data.cleanPayload,
   pushResponseInDataLayer: data.pushResponseInDataLayer,
   dataLayerName: data.dataLayerName,
   dataLayerEventName: data.dataLayerEventName
