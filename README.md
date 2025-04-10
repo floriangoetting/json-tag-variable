@@ -35,7 +35,8 @@ Set the endpoint hostname of your server-side GTM Instance. It needs to be a htt
 Set the path where your JSON Client endpoint in your server-side GTM Instance is available. This needs to match with the path you configured in the JSON Client Settings at the server-side GTM. It could be something like "/sgtm/data".
 
 ### Enable GZIP Compression of JSON Post Body
-When the option "Enable GZIP Compression of JSON Post Body" is checked, the JSON Post Body will be compressed using GZIP before it is sent to the server. The benefit of this setting is, that network traffic can be reduced. A potential downside might be that there a bit higher computation efforts needed from the server-side GTM to uncompress the data again.
+This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is send uncompressed. The GZIP Compression will be always disabled for Safari Browsers even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression.
+The benefit of this setting is, that network traffic can be reduced. A potential downside might be that there a bit higher computation efforts needed from the server-side GTM to uncompress the data again.
 
 ### Global Payload Settings
 In the Global Payload Settings it is possible to define key value pairs which are added to the JSON Payload to every JSON Tag event where the variable is selected as "Global Settings Configuration Variable".
