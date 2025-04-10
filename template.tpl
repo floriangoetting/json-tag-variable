@@ -67,7 +67,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.3.0"
+        "defaultValue": "1.4.0"
       },
       {
         "type": "TEXT",
@@ -133,11 +133,12 @@ ___TEMPLATE_PARAMETERS___
         ]
       },
       {
-        "type": "CHECKBOX",
+        "type": "TEXT",
         "name": "enableGzip",
-        "checkboxText": "Enable GZIP Compression of JSON Post Body",
+        "displayName": "Enable GZIP Compression of JSON Post Body",
         "simpleValueType": true,
-        "help": "When this checkbox is activated, the JSON POST Body is compressed with the GZIP Compression."
+        "defaultValue": false,
+        "help": "This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is send uncompressed. The GZIP Compression will be always disabled for Safari Browsers even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression."
       }
     ]
   },
