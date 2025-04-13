@@ -6,16 +6,18 @@ The JSON Tag Settings Variable let's you configure Global Settings which are app
 
 With the help of JSON Tag you can send your own JSON Data from your client-side GTM to your server-side GTM Instance and set stable, long-lasting server-set first party cookies to identify visitors and sessions.
 
-## How to install this custom template
-To install a custom template you need to have the template.tpl file on your local machine.
+## How to install this Template
+1. Download the template.tpl from this GitHub Repository
+2. Go to the Templates Section in your GTM
+3. In the Variables Templates Section click on "New"
+4. Select "Import" in the three dots menu at the top right
+5. Select the Downloaded template.tpl file and save the Template
+6. Close the Template Editor and go to the Variables Section
 
-For this template you can either download this file directly from GitHub or clone this repo. What you need to keep in mind is that, if there is a new version of the template, you will need to get the latest state again. There is no way to automatically update the template when its not in the "Gallery".
-When you have the file, you can add it in GTM.
-
-In GTM navigate to templates, select New in the Variable Templates, than click on 3 dots in the top right corner and select Import. This will open file explorer where you need to find your template.tpl file, import and save the template.
+Please keep in mind that until this Template is not part of the Community Template Gallery, you will need to get the latest state again if there is a new version of the template.
 
 ## Usage and Configuration Options
-Add this template to your container and create a new variable with it.
+After you added this template to your container, you can create a new variable with it. In the Variables Section under "User-Defined Variables" click on "New". Then you need to choose "JSON Tag Settings" as the Variable Type.
 
 Fill our the fields and save the variable.
 
