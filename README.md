@@ -6,6 +6,10 @@ The JSON Tag Settings Variable let's you configure Global Settings which are app
 
 With the help of JSON Tag you can send your own JSON Data from your client-side GTM to your server-side GTM Instance and set stable, long-lasting server-set first party cookies to identify visitors and sessions.
 
+For a detailed guide please check the [Blogpost about JSON Tag & JSON Client](https://www.floriangoetting.de/en/json-tag-json-client-a-flexible-first-party-tracking-solution-for-ssgtm/?utm_source=github&utm_medium=social&utm_campaign=ssgtm-json-tag-json-client-first-party-tracking&utm_content=json-tag-variable-repo).
+
+## How to install this Template
+
 ## How to install this Template
 1. Download the template.tpl from this GitHub Repository
 2. Go to the Templates Section in your GTM
