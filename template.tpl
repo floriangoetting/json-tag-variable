@@ -67,7 +67,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.4.3"
+        "defaultValue": "1.5.0"
       },
       {
         "type": "TEXT",
@@ -148,6 +148,14 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Global Payload Settings",
     "groupStyle": "ZIPPY_OPEN",
     "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "addCommonData",
+        "checkboxText": "Add Common Data",
+        "simpleValueType": true,
+        "defaultValue": true,
+        "help": "This checkbox let\u0027s you control if you want common data included in the JSON Tags which use this Settings Variable. The common data is useful to support basic functionalities of most Server Tags. If you wish to use your own data model instead, just uncheck the option.\n\nThe following common data will be included when the option is activated:\n \n\u003cul\u003e\n\u003cli\u003epage_location\u003c/li\u003e\n\u003cli\u003epage_path\u003c/li\u003e\n\u003cli\u003epage_hostname\u003c/li\u003e\n\u003cli\u003epage_referrer\u003c/li\u003e\n\u003cli\u003epage_title\u003c/li\u003e\n\u003cli\u003epage_encoding\u003c/li\u003e\n\u003cli\u003escreen_resolution\u003c/li\u003e \u003cli\u003eviewport_size\u003c/li\u003e\n\u003cli\u003elanguage\u003c/li\u003e\n\u003c/ul\u003e"
+      },
       {
         "type": "SIMPLE_TABLE",
         "name": "globalPayloadData",
@@ -244,6 +252,7 @@ return {
   endpointHostname: data.endpointHostname,
   endpointPath: data.endpointPath,
   enableGzip: data.enableGzip,
+  addCommonData: data.addCommonData,
   globalPayloadData: data.globalPayloadData,
   cleanPayload: data.cleanPayload,
   pushResponseInDataLayer: data.pushResponseInDataLayer,
