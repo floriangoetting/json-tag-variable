@@ -8,6 +8,8 @@ With the help of JSON Tag you can send your own JSON Data from your client-side 
 
 For a detailed guide please check the [Blogpost about JSON Tag & JSON Client](https://www.floriangoetting.de/en/json-tag-json-client-a-flexible-first-party-tracking-solution-for-ssgtm/?utm_source=github&utm_medium=social&utm_campaign=ssgtm-json-tag-json-client-first-party-tracking&utm_content=json-tag-variable-repo).
 
+![Community Template Gallery Status](https://img.shields.io/badge/Community%20Template%20Gallery%20Status-published-brightgreen)
+
 ## How to install this Template
 1. Go to the Templates Section in your GTM
 2. In the Variable Templates Section click on "Search Gallery"
