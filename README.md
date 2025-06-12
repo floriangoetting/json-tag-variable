@@ -9,14 +9,11 @@ With the help of JSON Tag you can send your own JSON Data from your client-side 
 For a detailed guide please check the [Blogpost about JSON Tag & JSON Client](https://www.floriangoetting.de/en/json-tag-json-client-a-flexible-first-party-tracking-solution-for-ssgtm/?utm_source=github&utm_medium=social&utm_campaign=ssgtm-json-tag-json-client-first-party-tracking&utm_content=json-tag-variable-repo).
 
 ## How to install this Template
-1. Download the template.tpl from this GitHub Repository
-2. Go to the Templates Section in your GTM
-3. In the Variables Templates Section click on "New"
-4. Select "Import" in the three dots menu at the top right
-5. Select the Downloaded template.tpl file and save the Template
-6. Close the Template Editor and go to the Variables Section
-
-Please keep in mind that until this Template is not part of the Community Template Gallery, you will need to get the latest state again if there is a new version of the template.
+1. Go to the Templates Section in your GTM
+2. In the Variable Templates Section click on "Search Gallery"
+3. Search for "JSON Tag Settings"
+4. Click on "JSON Tag Settings" in the results and on "Add to workspace"
+5. Go to the Variables Section and start using the Variable
 
 ## Usage and Configuration Options
 After you added this template to your container, you can create a new variable with it. In the Variables Section under "User-Defined Variables" click on "New". Then you need to choose "JSON Tag Settings" as the Variable Type.
