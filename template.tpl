@@ -10,15 +10,19 @@ ___INFO___
 
 {
   "type": "MACRO",
-  "id": "cvt_temp_public_id",
+  "id": "cvt_5N22V",
   "version": 1,
-  "securityGroups": [],
   "displayName": "JSON Tag Settings",
-  "categories": ["ANALYTICS", "CONVERSIONS","MARKETING"],
-  "description": "A settings variable to be able to reuse the standard settings in multiple JSON Tags.",
+  "categories": [
+    "ANALYTICS",
+    "CONVERSIONS",
+    "MARKETING"
+  ],
+  "description": "The JSON Tag Settings Variable let\u0027s you configure Global Settings which are applied to all of your JSON Tags. Together with the JSON Tag Template it can send Data in a vendor agnostic way to ssGTM.",
   "containerContexts": [
     "WEB"
-  ]
+  ],
+  "securityGroups": []
 }
 
 
