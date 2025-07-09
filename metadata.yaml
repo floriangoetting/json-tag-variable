@@ -1,6 +1,8 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
+  - sha: xxx
+    changeNotes: New Section "Debugging Settings" introduced with the option to manually set the x-gtm-server-preview	header in the requests for debugging purposes
   - sha: f9fa462e2ff35daf318479711429f1f1aec88250
     changeNotes: Updated Template Description
   - sha: 7fcd05f199963c00c7dc9e60895312614139414b

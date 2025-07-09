@@ -71,7 +71,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.5.0"
+        "defaultValue": "1.5.1"
       },
       {
         "type": "TEXT",
@@ -242,6 +242,21 @@ ___TEMPLATE_PARAMETERS___
         ]
       }
     ]
+  },
+  {
+    "type": "GROUP",
+    "name": "debuggingSettings",
+    "displayName": "Debugging Settings",
+    "groupStyle": "ZIPPY_OPEN",
+    "subParams": [
+      {
+        "type": "TEXT",
+        "name": "xGtmServerPreviewToken",
+        "displayName": "X-Gtm-Server-Preview Token",
+        "simpleValueType": true,
+        "help": "This field allows you to specify the X-Gtm-Server-Preview header manually in order to be able to debug the requests in the ssGTM Preview Mode. The JSON Tag Library will use this token to add the X-Gtm-Server-Preview header to the requests.\n\nThis could be a static value or a value read from a cookie where you store this information for example.\n\nSetting this field is normally not needed if you test in the same browser where the ssGTM Preview mode is running but it can be helpful if you test in one browser and use a different browser for the ssGTM Preview mode. It is also helpful when you want to debug App Webview Hits in the ssGTM Preview mode."
+      }
+    ]
   }
 ]
 
@@ -261,7 +276,8 @@ return {
   cleanPayload: data.cleanPayload,
   pushResponseInDataLayer: data.pushResponseInDataLayer,
   dataLayerName: data.dataLayerName,
-  dataLayerEventName: data.dataLayerEventName
+  dataLayerEventName: data.dataLayerEventName,
+  xGtmServerPreviewToken: data.xGtmServerPreviewToken
 };
 
 
