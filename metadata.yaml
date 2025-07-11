@@ -1,6 +1,8 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
+  - sha: xxx
+    changeNotes: Update of the default JSON Tag Library version to 1.5.2 to support fetch keepalive requests which are preferred over navigator.sendBeacon
   - sha: 41ce78148505b6c6df0fbd61876ac77722ceb68d
     changeNotes: New Section "Debugging Settings" introduced with the option to manually set the x-gtm-server-preview	header in the requests for debugging purposes
   - sha: f9fa462e2ff35daf318479711429f1f1aec88250
