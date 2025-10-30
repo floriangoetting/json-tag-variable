@@ -1,6 +1,8 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
+  - sha: xxx
+    changeNotes: Update of the default JSON Tag Library version to 1.5.4 to support the selection of different event sending methods (Fetch, Fetch Keepalive, Send Beacon)
   - sha: 6326499b5ed20acb08001ab85b10628de74feb22
     changeNotes: Update of the default JSON Tag Library version to 1.5.3 to support the new response format of JSON Client with event batching support. If you are working with the JSON Client Response, please double check your implementation in client side GTM.
   - sha: 9e5996c757326f904fe03a003d5dbd62d2ed8c45
