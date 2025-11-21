@@ -143,6 +143,14 @@ ___TEMPLATE_PARAMETERS___
         "simpleValueType": true,
         "defaultValue": false,
         "help": "This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is send uncompressed. The GZIP Compression will be always disabled for Safari Browsers even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression."
+      },
+      {
+        "type": "TEXT",
+        "name": "enableDataCollection",
+        "displayName": "Enable Data Collection",
+        "simpleValueType": true,
+        "help": "This field can contain a variable which returns true or false and based on this, the whole Data Collection is enabled or disabled. This can be very handy to disable the data collection for bot traffic or based on a consent status if you don\u0027t want to use Blocking Trigger for this purpose.",
+        "defaultValue": true
       }
     ]
   },
@@ -271,6 +279,7 @@ return {
   endpointHostname: data.endpointHostname,
   endpointPath: data.endpointPath,
   enableGzip: data.enableGzip,
+  enableDataCollection: data.enableDataCollection,
   addCommonData: data.addCommonData,
   globalPayloadData: data.globalPayloadData,
   cleanPayload: data.cleanPayload,

@@ -51,6 +51,9 @@ Set the path where your JSON Client endpoint in your server-side GTM Instance is
 This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is sent uncompressed. The GZIP Compression will be always disabled for Safari Browsers, even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression.
 The benefit of this setting is, that network traffic can be reduced. A potential downside might be, that there a bit higher computation efforts needed from the server-side GTM to uncompress the data again.
 
+### Enable Data Collection
+This field can contain a variable which returns true or false and based on this, the whole Data Collection is enabled or disabled. This can be very handy to disable the data collection for bot traffic or based on a consent status if you don't want to use Blocking Trigger for this purpose.
+
 ### Global Payload Settings
 #### Add Common Data
 This checkbox let's you control if you want common data included in the JSON Tags which use this Settings Variable. The common data is useful to support basic functionalities of most Server Tags. If you wish to use your own data model instead, just uncheck the option.
