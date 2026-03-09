@@ -169,6 +169,28 @@ ___TEMPLATE_PARAMETERS___
         "help": "This checkbox let\u0027s you control if you want common data included in the JSON Tags which use this Settings Variable. The common data is useful to support basic functionalities of most Server Tags. If you wish to use your own data model instead, just uncheck the option.\n\nThe following common data will be included when the option is activated:\n \n\u003cul\u003e\n\u003cli\u003epage_location\u003c/li\u003e\n\u003cli\u003epage_path\u003c/li\u003e\n\u003cli\u003epage_hostname\u003c/li\u003e\n\u003cli\u003epage_referrer\u003c/li\u003e\n\u003cli\u003epage_title\u003c/li\u003e\n\u003cli\u003epage_encoding\u003c/li\u003e\n\u003cli\u003escreen_resolution\u003c/li\u003e \u003cli\u003eviewport_size\u003c/li\u003e\n\u003cli\u003elanguage\u003c/li\u003e\n\u003c/ul\u003e"
       },
       {
+        "type": "CHECKBOX",
+        "name": "addTimestamp",
+        "checkboxText": "Add Timestamp",
+        "simpleValueType": true,
+        "help": "This checkbox allows you to control, if the timestamp in milliseconds since epoch should be added to the payload of the JSON Tags which use this JSON Tag Settings Variable."
+      },
+      {
+        "type": "TEXT",
+        "name": "timestampEventKey",
+        "displayName": "Timestamp Event Key",
+        "simpleValueType": true,
+        "defaultValue": "timestamp",
+        "help": "The Key to be used in the payload to send the timestamp to the Server Endpoint.",
+        "enablingConditions": [
+          {
+            "paramName": "addTimestamp",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      },
+      {
         "type": "SIMPLE_TABLE",
         "name": "globalPayloadData",
         "displayName": "Global Event Payload",
@@ -281,6 +303,8 @@ return {
   enableGzip: data.enableGzip,
   enableDataCollection: data.enableDataCollection,
   addCommonData: data.addCommonData,
+  addTimestamp: data.addTimestamp,
+  timestampEventKey: data.timestampEventKey,
   globalPayloadData: data.globalPayloadData,
   cleanPayload: data.cleanPayload,
   pushResponseInDataLayer: data.pushResponseInDataLayer,

@@ -71,6 +71,12 @@ The following common data will be included when the option is activated:
 <li>language</li>
 </ul>
 
+#### Add Timestamp
+This checkbox allows you to control, if the timestamp in milliseconds since epoch should be added to the payload of the JSON Tags which use this JSON Tag Settings Variable.
+
+#### Timestamp Event Key
+The Key to be used in the payload to send the timestamp to the Server Endpoint.
+
 #### Global Event Payload
 In the Global Event Payload settings it is possible to define key value pairs which are added to the JSON Payload to every JSON Tag event where the variable is selected as "Global Settings Configuration Variable".
 
