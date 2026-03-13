@@ -71,7 +71,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.5.4"
+        "defaultValue": "1.6.0"
       },
       {
         "type": "TEXT",
@@ -138,19 +138,35 @@ ___TEMPLATE_PARAMETERS___
       },
       {
         "type": "TEXT",
-        "name": "enableGzip",
-        "displayName": "Enable GZIP Compression of JSON Post Body",
-        "simpleValueType": true,
-        "defaultValue": false,
-        "help": "This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is send uncompressed. The GZIP Compression will be always disabled for Safari Browsers even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression."
-      },
-      {
-        "type": "TEXT",
         "name": "enableDataCollection",
         "displayName": "Enable Data Collection",
         "simpleValueType": true,
         "help": "This field can contain a variable which returns true or false and based on this, the whole Data Collection is enabled or disabled. This can be very handy to disable the data collection for bot traffic or based on a consent status if you don\u0027t want to use Blocking Trigger for this purpose.",
         "defaultValue": true
+      },
+      {
+        "type": "GROUP",
+        "name": "compressionAndEncodingSettings",
+        "displayName": "Compression and Encoding Settings",
+        "groupStyle": "ZIPPY_OPEN",
+        "subParams": [
+          {
+            "type": "TEXT",
+            "name": "enableGzip",
+            "displayName": "Enable GZIP Compression of JSON Post Body",
+            "simpleValueType": true,
+            "defaultValue": false,
+            "help": "This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is send uncompressed. The GZIP Compression will be always disabled for WebKit Browsers like Safari even if GZIP Compression is activated here. The reason is, that WebKit Browsers do not fully support GZIP Compression."
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "enableBase64Fallback",
+            "checkboxText": "Enable Base64 Encoding Fallback",
+            "simpleValueType": true,
+            "help": "This option allows you to activate the Base64 encoding for cases where gzip compression is not available (e.g. webkit browsers or sendBeacon or fetch keepalive requests). If the enableGzip flag is not activatated from the template, this option has no effect.\n\nBase64 has the benefit, that it makes the payload unreadable which is a natural protection for many automatic SQL injection attempts. But it does not compress the size of the requests like gzip does.\n\nPlease ensure updating JSON Client to the newest version before activating this checkbox. You will see requests to \"/yourendpoint/ba\" in the browser for base64 encoded requests.",
+            "defaultValue": false
+          }
+        ]
       }
     ]
   },
@@ -300,8 +316,9 @@ return {
   libraryUrl: data.libraryUrl,
   endpointHostname: data.endpointHostname,
   endpointPath: data.endpointPath,
-  enableGzip: data.enableGzip,
   enableDataCollection: data.enableDataCollection,
+  enableGzip: data.enableGzip,
+  enableBase64Fallback: data.enableBase64Fallback,
   addCommonData: data.addCommonData,
   addTimestamp: data.addTimestamp,
   timestampEventKey: data.timestampEventKey,

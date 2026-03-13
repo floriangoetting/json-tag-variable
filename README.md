@@ -47,12 +47,19 @@ Set the endpoint hostname of your server-side GTM Instance. It needs to be a htt
 #### Endpoint Path
 Set the path where your JSON Client endpoint in your server-side GTM Instance is available. This needs to match with the path you configured in the JSON Client Settings at the server-side GTM. It could be something like "/sgtm/data".
 
+### Enable Data Collection
+This field can contain a variable which returns true or false and based on this, the whole Data Collection is enabled or disabled. This can be very handy to disable the data collection for bot traffic or based on a consent status if you don't want to use Blocking Trigger for this purpose.
+
 #### Enable GZIP Compression of JSON Post Body
 This field can contain a variable which returns true or false and based on this, the JSON POST Body is compressed with the GZIP Compression or it is sent uncompressed. The GZIP Compression will be always disabled for Safari Browsers, even if GZIP Compression is activated here. The reason is, that Safari Browsers do not fully support GZIP Compression.
 The benefit of this setting is, that network traffic can be reduced. A potential downside might be, that there a bit higher computation efforts needed from the server-side GTM to uncompress the data again.
 
-### Enable Data Collection
-This field can contain a variable which returns true or false and based on this, the whole Data Collection is enabled or disabled. This can be very handy to disable the data collection for bot traffic or based on a consent status if you don't want to use Blocking Trigger for this purpose.
+#### Enable Base64 Encoding Fallback
+This option allows you to activate the Base64 encoding for cases where gzip compression is not available (e.g. webkit browsers or sendBeacon or fetch keepalive requests). If the enableGzip flag is not activatated from the template, this option has no effect.
+
+Base64 has the benefit, that it makes the payload unreadable which is a natural protection for many automatic SQL injection attempts. But it does not compress the size of the requests like gzip does.
+
+Please ensure updating JSON Client to the newest version before activating this checkbox. You will see requests to "/yourendpoint/ba" in the browser for base64 encoded requests.
 
 ### Global Payload Settings
 #### Add Common Data
