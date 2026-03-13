@@ -1,7 +1,7 @@
 homepage: "https://www.floriangoetting.de"
 documentation: "https://github.com/floriangoetting/json-tag-variable"
 versions:
-  - sha: xyz
+  - sha: b32fdd438167ebb4302483e550eb8201f520b12f
     changeNotes: Added support for the Base64 Encoding Fallback option. Updating JSON Client and the JSON Tag Library to version 1.6.0 is required to utilize this feature.
   - sha: 5adbc779d09ed2d7b79835a12ebb7ec88c3d5d66
     changeNotes: Added the "Add Timestamp" option with the ability to define the timestamp key to be used. This allows setting the timestamp client-side instead of relying on the server timestamp which can be very useful in some use cases.
