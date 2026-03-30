@@ -71,7 +71,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "help": "If you select jsDelivr as Library Host, you need to specify the release version of JSON Tag. To find the available versions just check the Release Section within https://github.com/floriangoetting/json-tag.",
-        "defaultValue": "1.6.0"
+        "defaultValue": "2.0.0"
       },
       {
         "type": "TEXT",
@@ -165,6 +165,67 @@ ___TEMPLATE_PARAMETERS___
             "simpleValueType": true,
             "help": "This option allows you to activate the Base64 encoding for cases where gzip compression is not available (e.g. webkit browsers or sendBeacon or fetch keepalive requests). If the enableGzip flag is not activatated from the template, this option has no effect.\n\nBase64 has the benefit, that it makes the payload unreadable which is a natural protection for many automatic SQL injection attempts. But it does not compress the size of the requests like gzip does.\n\nPlease ensure updating JSON Client to the newest version before activating this checkbox. You will see requests to \"/yourendpoint/ba\" in the browser for base64 encoded requests.",
             "defaultValue": false
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "eventBatchingSettings",
+        "displayName": "Event Batching Settings",
+        "groupStyle": "ZIPPY_OPEN",
+        "subParams": [
+          {
+            "type": "CHECKBOX",
+            "name": "enableEventBatching",
+            "checkboxText": "Enable Event Batching",
+            "simpleValueType": true,
+            "defaultValue": true,
+            "help": "When batching is enabled, only events sent with the `fetch` method are queued on `window` and sent together after the configured delay. Failed `fetch` requests are added back to the in-memory queue for a retry with the next flush. Events sent with `sendBeacon` and `fetchKeepalive` bypass the queue and are sent immediately. The queue is intentionally not persisted across full page reloads."
+          },
+          {
+            "type": "TEXT",
+            "name": "eventBatchingDelay",
+            "displayName": "Event Batching Delay",
+            "simpleValueType": true,
+            "help": "Delay in milliseconds before queued events are flushed. If not specified, `150` is used.",
+            "defaultValue": 150,
+            "enablingConditions": [
+              {
+                "paramName": "enableEventBatching",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "eventBatchingMaxSize",
+            "displayName": "Event Batching Max Size",
+            "simpleValueType": true,
+            "help": "Maximum number of events that are sent in one batch. If not specified, `20` is used.",
+            "defaultValue": 20,
+            "enablingConditions": [
+              {
+                "paramName": "enableEventBatching",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "eventBatchingMaxRetries",
+            "displayName": "Event Batching Max Retries",
+            "simpleValueType": true,
+            "help": "Maximum number of automatic retry attempts for failed batched fetch requests. If not specified, 3 is used. After the limit is reached, automatic timer retries stop and queued events are retried when the next event is added.",
+            "defaultValue": 3,
+            "enablingConditions": [
+              {
+                "paramName": "enableEventBatching",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
           }
         ]
       }
@@ -319,6 +380,10 @@ return {
   enableDataCollection: data.enableDataCollection,
   enableGzip: data.enableGzip,
   enableBase64Fallback: data.enableBase64Fallback,
+  enableEventBatching: data.enableEventBatching,
+  eventBatchingDelay: data.eventBatchingDelay,
+  eventBatchingMaxSize: data.eventBatchingMaxSize,
+  eventBatchingMaxRetries: data.eventBatchingMaxRetries,
   addCommonData: data.addCommonData,
   addTimestamp: data.addTimestamp,
   timestampEventKey: data.timestampEventKey,

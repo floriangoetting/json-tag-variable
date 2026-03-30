@@ -61,6 +61,18 @@ Base64 has the benefit, that it makes the payload unreadable which is a natural 
 
 Please ensure updating JSON Client to the newest version before activating this checkbox. You will see requests to "/yourendpoint/ba" in the browser for base64 encoded requests.
 
+### Event Batching Settings
+#### Enable Event Batching
+This checkbox allows you to enable or disable in-memory event batching. When batching is enabled, only events sent with the `fetch` method are queued on `window` and sent together after the configured delay. Failed `fetch` requests are added back to the in-memory queue and retried. Retries are capped by the "Event Batching Max Retries" setting (default: `3`). Once the limit is reached, automatic timer retries stop and queued events are retried when the next event is added. Events sent with `sendBeacon` and `fetchKeepalive` bypass the queue and are sent immediately. The queue is intentionally not persisted across full page reloads.
+
+#### Event Batching Delay
+Delay in milliseconds before queued events are flushed. If not specified, `150` is used.
+
+#### Event Batching Max Size
+Maximum number of events that are sent in one batch. If not specified, `20` is used.
+
+#### Event Batching Max Retries
+Maximum number of automatic retry attempts for failed batched fetch requests. If not specified, 3 is used. After the limit is reached, automatic timer retries stop and queued events are retried when the next event is added.
 ### Global Payload Settings
 #### Add Common Data
 This checkbox let's you control if you want common data included in the JSON Tags which use this Settings Variable. The common data is useful to support basic functionalities of most Server Tags. If you wish to use your own data model instead, just uncheck the option.
